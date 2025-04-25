@@ -377,7 +377,7 @@ const Assessment = () => {
             />
             
             <TextField
-              label="Age "
+              label="Age"
               name="age"
               type="number"
               value={formData.age}
@@ -420,18 +420,6 @@ const Assessment = () => {
             </FormControl>
             
             <Stack spacing={3} sx={{ mt: 3 }}>
-              <TextField
-                label="Age"
-                name="age"
-                type="number"
-                value={formData.age}
-                onChange={handleChange}
-                fullWidth
-                required
-                error={!!formErrors.age}
-                helperText={formErrors.age || ''}
-                inputProps={{ min: 18, max: 120 }}
-              />
               
               <FormControl fullWidth required error={!!formErrors.gender}>
                 <FormLabel>Gender</FormLabel>
@@ -1002,6 +990,9 @@ const Assessment = () => {
       </Typography>
       <Typography variant="body1" color="text.secondary" paragraph>
         Complete this comprehensive assessment to receive personalized health insights and recommendations.
+      </Typography>
+      <Typography variant="body2" color="warning.main" sx={{ mb: 2, fontStyle: 'italic' }} paragraph>
+        Please note: This app is for informational and educational purposes only and does not provide medical advice, diagnosis, or treatment. Always consult with a qualified healthcare professional for medical concerns.
       </Typography>
       
       {/* Show error alert if there are validation errors */}
